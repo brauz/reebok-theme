@@ -695,16 +695,6 @@
               </div>
             {%- endunless -%}
 
-          <div
-            id="brauz-find-in-store-config-product-page"
-            data-sd="{{ shop.permanent_domain }}"
-            data-cvi="{{ product.first_available_variant.id }}"
-            data-hodv="{{ product.has_only_default_variant }}"
-            style="display: none; width: 0"
-          ></div>
-          <div id="brauz-find-in-store-product-page" style="width: 100%;"></div>
-          <script src="https://d3aq2u4yw77ivo.cloudfront.net/find-in-store/shopify/reebok/find-in-store.shopify.reebok.prod.js" async></script>
-
           {%- when 'buy_buttons' -%}
             <div {{ block.shopify_attributes }}>
               <product-form class="product-form">
@@ -778,6 +768,16 @@
                   </pickup-availability-preview>
                 </template>
               </pickup-availability>
+
+              <div
+                id="brauz-find-in-store-config-product-page"
+                data-sd="{{ shop.permanent_domain }}"
+                data-cvi="{{ product.first_available_variant.id }}"
+                data-hodv="{{ product.has_only_default_variant }}"
+                style="display: none; width: 0"
+              ></div>
+              <div id="brauz-find-in-store-product-page" style="width: 100%;"></div>
+              <script src="https://d3aq2u4yw77ivo.cloudfront.net/find-in-store/shopify/reebok/find-in-store.shopify.reebok.prod.js" async></script>
             </div>
 
             <script src="{{ 'pickup-availability.js' | asset_url }}" defer="defer"></script>
